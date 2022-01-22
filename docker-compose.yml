@@ -1,0 +1,45 @@
+version: "3.7"
+services:
+  botpress:
+    build: .
+    image: img_botpress:v1.1
+    container_name: botpress-server
+    ports:
+      - 3000:3000
+    environment:
+      - BP_CONFIG_HTTPSERVER_HOST=0.0.0.0
+      - NODE_ENV=production
+      - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_USER}
+      - BP_MODULE_NLU_DUCKLINGURL=http://botpress_lang:8000
+      - BP_MODULE_NLU_LANGUAGESOURCES=[{"endpoint":"http://botpress_lang:3100"}]
+      - BP_PRODUCTION=true
+      - LANG=C.UTF-8
+      - BP_IS_DOCKER=true
+    depends_on:
+      - postgres
+    volumes:
+      - ./botpress/data:/botpress/data
+  botpress_lang:
+    image: botpress/server
+    container_name: botpress-lang
+    command: bash -c "./duckling -p 8000 & ./bp lang --langDir /botpress/lang --port 3100"
+    expose:
+      - 3100
+      - 8000
+    volumes:
+      - ./botpress/language:/botpress/lang
+  postgres:
+    image: postgres:11
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGPORT: 5432
+      POSTGRES_DB: ${POSTGRES_USER}
+    volumes:
+      - vl_postgres:/var/lib/postgresql/data
+
+volumes:
+  vl_postgres:
