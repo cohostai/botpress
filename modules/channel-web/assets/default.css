@@ -449,8 +449,9 @@ body {
   background-color: #fbfbfb;
   padding: 5px 15px;
   text-align: left;
+  border-left: 1px solid rgb(124, 69, 250);
+  border-right: 1px solid rgb(124, 69, 250);
   border-top: 1px solid rgb(124, 69, 250);
-  border-bottom: 1px solid rgb(124, 69, 250);
 }
 
 /* CAROUSEL  */
@@ -644,8 +645,6 @@ body {
   transition: border 0.3s ease;
   outline: none;
   padding-bottom: 0.5rem;
-  border-radius: 0 0 18px 18px;
-  border-bottom: 1px solid rgb(124, 69, 250);
   border-right: 1px solid rgb(124, 69, 250);
   border-left: 1px solid rgb(124, 69, 250);
 }
@@ -675,11 +674,12 @@ body {
 }
 
 .bpw-powered {
-  display: none;
   text-align: right;
-  border-right: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  padding: 2px 5px 2px 0;
+  border-radius: 0 0 18px 18px;
+  border-right: 1px solid rgb(124, 69, 250);
+  border-left: 1px solid rgb(124, 69, 250);
+  padding: 2px 17px 2px 0;
+  color: #000;
 }
 
 .bpw-send-buttons {
@@ -693,10 +693,11 @@ body {
 .bpw-send-button {
   border: none;
   border-radius: 5px;
-  background: #fff;
+  background-color: rgb(124, 69, 250);
   padding: 5px;
   font-size: 14px;
   font-weight: 500;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -725,8 +726,7 @@ body {
   border: solid 1px rgb(124, 69, 250);
   background-color: rgb(124, 69, 250);
   border-radius: 18px 18px 0 0;
-  /* border-top: solid 1px #ccc;
-  border-bottom: 1px solid #ccc; */
+  border-bottom-color: #ccc;
   padding: 3px 15px 0 10px;
   overflow: hidden;
 }
