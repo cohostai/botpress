@@ -28,11 +28,12 @@ body {
 }
 
 .bpw-from-user .bpw-chat-bubble .bpw-chat-bubble-content {
-  background-color: #000000;
+  /* background-color: #000000; */
+  background-color: rgb(124, 69, 250);
 }
 
 .bpw-from-bot .bpw-chat-bubble .bpw-chat-bubble-content {
-  background-color: #ffffff;
+  background-color: #e4e6eb;
   color: #000000;
 }
 
@@ -49,7 +50,7 @@ body {
 }
 
 .bpw-widget-btn {
-  background-color: #000000;
+  background-color: rgb(124, 69, 250);
 }
 
 .bpw-message-read-more {
@@ -67,20 +68,20 @@ body {
 
 .bpw-widget-btn:focus,
 .bpw-widget-btn:hover {
-  background-color: #333;
+  background-color: rgb(124, 69, 250);
 }
 
 .bpw-chat-container {
-  background-color: #ffffff;
-  color: #000000;
+  /* background-color: #ffffff; */
+  color: #ffffff;
 }
 
 .bpw-layout {
   position: fixed;
   bottom: 0;
   right: 0;
-  height: 100%;
-  border-left: 1px solid #ccc;
+  height: 60%;
+  /* border-left: 1px solid #ccc; */
   -webkit-box-orient: vertical;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -105,14 +106,15 @@ body {
 }
 
 .bpw-button {
-  background-color: var(--main-bg-color);
-  font-size: 1rem;
+  background-color: rgb(124, 69, 250);
+  font-size: 14px;
+  color: #ffffff;
   padding: 0.4rem 0.8rem;
   min-width: 5rem;
   min-height: 40px;
   text-align: center;
   border: 1px solid currentColor;
-  border-radius: 0px;
+  border-radius: 15px;
   cursor: pointer;
   margin: 3px 2px;
   text-transform: none;
@@ -132,9 +134,9 @@ body {
   height: 40px;
 }
 
-.bpw-button:hover {
+/* .bpw-button:hover {
   background-color: rgba(0, 0, 0, 0.07);
-}
+} */
 
 .bpw-input {
   height: 30px;
@@ -286,16 +288,20 @@ body {
   -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 0 0.5rem 0.5rem 0.5rem;
+  background-color: #ffffff;
+  border-left: 1px solid rgb(124, 69, 250);
+  border-right: 1px solid rgb(124, 69, 250);
 }
 
 .bpw-date-container {
   color: #666;
   text-align: center;
   font-size: 12px;
-  margin: 40px 0 20px;
+  margin: 20px 0 0;
 }
 
 .bpw-date-container .bpw-small-line {
+  display: none;
   border-bottom: solid 1px #555;
   margin: auto;
   width: 80px;
@@ -331,6 +337,7 @@ body {
 .bpw-chat-bubble-content {
   border: 1px solid #f1f1f1;
   padding: 0.5rem 0.75rem;
+  border-radius: 15px;
 }
 
 .bpw-message-feedback {
@@ -355,7 +362,7 @@ body {
 }
 
 .bpw-message-feedback i:hover {
-  fill: black;
+  fill: rgb(124, 69, 250);
 }
 
 .bpw-message-feedback > div {
@@ -364,7 +371,7 @@ body {
   margin-top: -8px;
   margin-right: -10px;
   background-color: white;
-  padding: 8px;
+  padding: 4px;
 
   display: flex;
   justify-content: space-evenly;
@@ -440,9 +447,11 @@ body {
 
 .bpw-keyboard-quick_reply {
   background-color: #fbfbfb;
-  padding: 15px 20px;
+  padding: 5px 15px;
   text-align: left;
-  border-top: 1px solid #dcdcdc;
+  border-left: 1px solid rgb(124, 69, 250);
+  border-right: 1px solid rgb(124, 69, 250);
+  border-top: 1px solid rgb(124, 69, 250);
 }
 
 /* CAROUSEL  */
@@ -627,20 +636,22 @@ body {
 }
 
 .bpw-composer {
-  border-top-width: 1px;
+  /* border-top-width: 1px;
   border-top-style: solid;
-  border-top-color: #aaaaaa;
+  border-top-color: #aaaaaa; */
   position: relative;
   padding: 0.5rem 0 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: #ffffff;
   transition: border 0.3s ease;
   outline: none;
   padding-bottom: 0.5rem;
+  border-right: 1px solid rgb(124, 69, 250);
+  border-left: 1px solid rgb(124, 69, 250);
 }
 
 .bpw-composer-inner {
   display: flex;
-  padding: 5px;
+  padding: 0 15px;
 }
 
 .bpw-composer-textarea {
@@ -655,18 +666,27 @@ body {
   line-height: 1.2;
   height: 50px;
   border: none;
-  font-size: 1rem;
-  padding: 0.75rem 1rem;
+  font-size: 14px;
+  padding: 15px 15px 10px 15px;
   padding-right: 60px;
+  border: 1px solid rgb(124, 69, 250);
+  border-radius: 12px;
 }
 
 .bpw-powered {
   text-align: right;
-  border-top: 1px solid #aaaaaa;
-  padding: 2px 5px 2px 0;
+  border-radius: 0 0 18px 18px;
+  border-right: 1px solid rgb(124, 69, 250);
+  border-left: 1px solid rgb(124, 69, 250);
+  padding: 2px 17px 2px 0;
+  color: #000;
+  background-color: #fff;
 }
 
 .bpw-send-buttons {
+  position: absolute;
+  right: 30px;
+  bottom: 25px;
   display: flex;
   flex-direction: row;
 }
@@ -674,16 +694,18 @@ body {
 .bpw-send-button {
   border: none;
   border-radius: 5px;
-  background: #fff;
+  background-color: rgb(124, 69, 250);
   padding: 5px;
   font-size: 14px;
   font-weight: 500;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .bpw-send-button:hover,
 .bpw-send-button:focus {
-  background: #d8d8d8;
+  background-color: rgb(124, 69, 250);
+  color: #ffffff;
 }
 
 /** HEADER STUFF */
@@ -702,9 +724,11 @@ body {
   flex-shrink: 0;
   height: 52px;
   font-weight: 500;
-  border-top: solid 1px #ccc;
-  border-bottom: 1px solid #ccc;
-  padding: 0 1rem;
+  border: solid 1px rgb(124, 69, 250);
+  background-color: rgb(124, 69, 250);
+  border-radius: 18px 18px 0 0;
+  border-bottom-color: #ccc;
+  padding: 3px 15px 0 10px;
   overflow: hidden;
 }
 
@@ -800,7 +824,7 @@ body {
 
 .bpw-header-icon svg,
 .bpw-header-icon svg path {
-  fill: #1a1e22;
+  fill: #ffffff;
   transition: fill 0.3s;
 }
 
@@ -830,6 +854,7 @@ body {
 
   padding: 0;
   border: none;
+  border-radius: 50%;
   background-clip: padding-box;
 
   transition: width 1s, height 1s;
@@ -1094,4 +1119,10 @@ body {
 
 .bpw-rtl .bpw-keyboard-quick_reply-dropdown {
   direction: rtl;
+}
+
+#btn-reset,
+#btn-download,
+#btn-conversations {
+  display: none;
 }

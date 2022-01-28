@@ -55,6 +55,7 @@ src/bp
 
 build/tests/e2e/screenshots/*
 !build/tests/e2e/screenshots/.gitkeep
+botpress/
 
 # Botpress docs
 /docs/reference/public
@@ -72,4 +73,7 @@ modules/*/assets/web/*
 modules/*/assets/config.schema.json
 **/out/**
 **/dist/**
+
+# env
+*.env
 
