@@ -680,6 +680,7 @@ body {
   border-left: 1px solid rgb(124, 69, 250);
   padding: 2px 17px 2px 0;
   color: #000;
+  background-color: #fff;
 }
 
 .bpw-send-buttons {
