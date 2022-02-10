@@ -3,17 +3,16 @@ import { RequestWithUser } from 'common/typings'
 import { ALL_BOTS } from 'common/utils'
 import { ConfigProvider } from 'core/config'
 import {
-  InvalidOperationError,
-  BadRequestError,
   ForbiddenError,
   InternalServerError,
+  InvalidOperationError,
   NotFoundError,
   PaymentRequiredError,
   UnauthorizedError
 } from 'core/routers'
 import { WorkspaceService } from 'core/users'
 import { NextFunction, Request, RequestHandler, Response } from 'express'
-import { AuthService, WORKSPACE_HEADER, SERVER_USER } from './auth-service'
+import { AuthService, SERVER_USER, WORKSPACE_HEADER } from './auth-service'
 
 const debugFailure = DEBUG('audit:collab:fail')
 const debugSuccess = DEBUG('audit:collab:success')
@@ -109,8 +108,8 @@ export const assertBotpressPro = (workspaceService: WorkspaceService) => async (
   next: NextFunction
 ) => {
   if (!process.IS_PRO_ENABLED || !process.IS_LICENSED) {
-    // Allow to create the first user
-    if ((await workspaceService.getUniqueCollaborators()) > 0) {
+    // Allow to create the first 10 user
+    if ((await workspaceService.getUniqueCollaborators()) > 10) {
       return next(new PaymentRequiredError('Botpress Pro is required to perform this action'))
     }
   }
