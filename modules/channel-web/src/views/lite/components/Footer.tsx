@@ -8,23 +8,19 @@ const Footer = () => {
         <span>
           <FormattedMessage
             id="footer.poweredBy"
-            defaultMessage="We're {icon} by {link}"
+            defaultMessage="Built with {icon} by {link}"
             values={{
               icon: (
                 <i>
-                  <svg width="7" height="13" viewBox="0 0 7 13" xmlns="http://www.w3.org/2000/svg">
-                    <g fill="none" fillRule="evenodd">
-                      <path
-                        d="M4.127.496C4.51-.12 5.37.356 5.16 1.07L3.89 5.14H6.22c.483 0 .757.616.464 1.044l-4.338 6.34c-.407.595-1.244.082-1.01-.618L2.72 7.656H.778c-.47 0-.748-.59-.48-1.02L4.13.495z"
-                        fill="#F6A623"
-                      />
-                      <path fill="#FEF79E" d="M4.606.867L.778 7.007h2.807l-1.7 5.126 4.337-6.34H3.16" />
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="13px" height="13px" viewBox="0 0 13 13" version="1.1">
+                    <g id="surface1">
+                      <path stroke="none" fillRule="nonzero" fill="rgb(92.156863%,29.411765%,34.117647%)" fillOpacity="1" d="M 11.957031 1.1875 C 10.566406 -0.378906 8.3125 -0.378906 6.925781 1.1875 L 6.5 1.664062 L 6.078125 1.1875 C 4.6875 -0.378906 2.433594 -0.378906 1.042969 1.1875 C -0.347656 2.75 -0.347656 5.285156 1.042969 6.847656 L 1.46875 7.324219 L 6.5 12.988281 L 11.535156 7.324219 L 11.957031 6.847656 C 13.347656 5.285156 13.347656 2.75 11.957031 1.1875 Z M 11.957031 1.1875 "></path>
                     </g>
                   </svg>
                 </i>
               ),
               link: (
-                <a href={'https://www.cohost.ai/'} target="_blank">
+                <a href={'https://www.cohost.vn/'} target="_blank">
                   {'Cohost AI'}
                 </a>
               )

@@ -1126,3 +1126,10 @@ body {
 #btn-conversations {
   display: none;
 }
+.bp-widget-side {
+  width: 360px !important;
+}
+
+#bp-widget {
+  width: 360px !important;
+}

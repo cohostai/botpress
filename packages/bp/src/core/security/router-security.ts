@@ -7,7 +7,6 @@ import {
   InternalServerError,
   InvalidOperationError,
   NotFoundError,
-  PaymentRequiredError,
   UnauthorizedError
 } from 'core/routers'
 import { WorkspaceService } from 'core/users'
@@ -109,9 +108,9 @@ export const assertBotpressPro = (workspaceService: WorkspaceService) => async (
 ) => {
   if (!process.IS_PRO_ENABLED || !process.IS_LICENSED) {
     // Allow to create the first 10 user
-    if ((await workspaceService.getUniqueCollaborators()) > 10) {
-      return next(new PaymentRequiredError('Botpress Pro is required to perform this action'))
-    }
+    // if ((await workspaceService.getUniqueCollaborators()) > 10) {
+    //   return next(new PaymentRequiredError('Botpress Pro is required to perform this action'))
+    // }
   }
 
   return next()
