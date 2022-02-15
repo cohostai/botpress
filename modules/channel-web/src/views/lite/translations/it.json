@@ -4,7 +4,7 @@
   "composer.placeholderInit": "Scrivi qualcosa a {name}",
   "composer.message": "Messaggio da inviare",
   "composer.send": "Invia",
-  "footer.poweredBy": "We're {icon} by {link}",
+  "footer.poweredBy": "Built with {icon} by {link}",
   "header.conversations": "Conversazioni",
   "header.hideChatWindow": "Nascondi la finestra chat",
   "header.deleteConversation": "Sei sicuro di voler eliminare l'intera conversazione?",
