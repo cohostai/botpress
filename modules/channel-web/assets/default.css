@@ -80,7 +80,7 @@ body {
   position: fixed;
   bottom: 0;
   right: 0;
-  height: 60%;
+  height: 100%;
   /* border-left: 1px solid #ccc; */
   -webkit-box-orient: vertical;
   -ms-flex-direction: column;
