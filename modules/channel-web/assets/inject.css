@@ -48,9 +48,8 @@
 }
 
 .bp-widget-side.emulator {
-  height: 100% !important;
-  top: auto;
-  bottom: 0px;
+  height: calc(100% - 78px) !important;
+  top: 50px;
 }
 
 @media only screen and (max-device-width: 768px) {
