@@ -39,12 +39,12 @@
 }
 
 .bp-widget-side {
-  top: 0px;
+  top: auto;
   left: auto;
   bottom: 0px;
   right: 0px;
-  width: 480px;
-  height: 100% !important;
+  width: 360px;
+  height: 70% !important;
 }
 
 .bp-widget-side.emulator {
